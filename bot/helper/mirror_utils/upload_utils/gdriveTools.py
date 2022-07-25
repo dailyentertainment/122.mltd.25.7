@@ -160,7 +160,7 @@ class GoogleDriveHelper:
         # File body description
         file_metadata = {
             'name': file_name,
-            'description': 'Uploaded by Mirror-leech-telegram-bot',
+            'description': 'Uploaded by Stillforce',
             'mimeType': mime_type,
         }
         if parent_id is not None:
@@ -352,7 +352,6 @@ class GoogleDriveHelper:
                 msg += f'\n<b>SubFolders: </b>{self.__total_folders}'
                 msg += f'\n<b>Files: </b>{self.__total_files}'
                 buttons = ButtonMaker()
-                buttons.buildbutton("☁️ Drive Link", durl)
                 if INDEX_URL is not None:
                     url_path = rquote(f'{meta.get("name")}', safe='')
                     url = f'{INDEX_URL}/{url_path}/'
@@ -415,7 +414,7 @@ class GoogleDriveHelper:
     def __create_directory(self, directory_name, parent_id):
         file_metadata = {
             "name": directory_name,
-            "description": "Uploaded by Mirror-leech-telegram-bot",
+            "description": "Uploaded by Stillforce",
             "mimeType": self.__G_DRIVE_DIR_MIME_TYPE
         }
         if parent_id is not None:
